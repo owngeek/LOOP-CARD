@@ -1,24 +1,27 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import FbComponent from'./component/FbComponent'
+import fbobjectone from'./component/fbobjectone'
 
-function App() {
+
+function App(props) {
+ 
+let fbMain = fbobjectone.map(function(n,index){
+    return <FbComponent
+    key={index}
+    vivek={n}
+
+><h2>vggyh</h2></FbComponent>
+  })
+ 
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      
+    {fbMain}
+    
+    
     </div>
   );
 }
